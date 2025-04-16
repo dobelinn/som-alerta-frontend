@@ -1,23 +1,47 @@
 body {
   margin: 0;
-  background-color: #f2f2f2;
+  background-color: #F3E9DC;
   font-family: sans-serif;
+  overflow-x: hidden; /* previne scroll horizontal */
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.header hr {
+  width: 80%;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.quarto-wrapper {
+.ala-wrapper {
   position: relative;
-  width: 400px; /* largura fixa */
+  width: 600px;
   height: auto;
 }
 
-.quarto-img {
+.ala-img {
   width: 100%;
   height: auto;
   display: block;
@@ -26,16 +50,15 @@ body {
 
 .alerta-piscando {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
+  top: 115px; /* ajustado em px para posicionar no Quarto 1 */
+  left: 115px;
+  width: 24px;
+  height: 24px;
   background-color: red;
   border-radius: 50%;
   animation: pulse 1s infinite;
   opacity: 0.8;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
 }
 
 @keyframes pulse {
@@ -51,4 +74,66 @@ body {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.8;
   }
+}
+
+.botoes {
+  margin-top: 20px;
+}
+
+.botao-teste {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #5E3023;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-teste:hover {
+  background-color: #773C2C;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.painel-teste {
+  background-color: #895737;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.painel-teste h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.grupo-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.grupo-inputs label {
+  font-size: 0.9rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-inputs input {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
