@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quarto-wrapper {
+  position: relative;
+  width: 400px; /* largura fixa */
+  height: auto;
+}
+
+.quarto-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.alerta-piscando {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+  opacity: 0.8;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+}
