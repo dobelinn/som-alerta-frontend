@@ -46,7 +46,7 @@ function App() {
 
       <div className="conteudo">
         <div className="ala-wrapper">
-          <img src="/ala.jpg" alt="Ala hospitalar" className="ala-img" />
+          <img src="/ala.png" alt="Ala hospitalar" className="ala-img" />
           {alerta && <div className="alerta-piscando" />}
         </div>
 
